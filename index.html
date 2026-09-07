@@ -1,0 +1,13 @@
+---
+layout: default
+---
+<h2>Latest News & Updates across Shekhawati</h2>
+<ul>
+  {% for post in site.posts %}
+    <li>
+      <strong>{{ post.date | date: "%B %d, %Y" }}</strong> - 
+      <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
+      (<em>{{ post.location }}</em>)
+    </li>
+  {% endfor %}
+</ul>
